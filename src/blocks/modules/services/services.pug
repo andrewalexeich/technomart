@@ -1,0 +1,27 @@
+section.services
+	.container
+		.services__about
+			h2.services__about-heading Сервисы
+			.services__about-subheading Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+		.services__wrapper
+			.services__tabs
+				button.services__tab.services__tab--active Доставка
+				button.services__tab Гарантия
+				button.services__tab Кредит
+			.services__content
+				.services__info
+					.services__info-description
+						h2.services__info-heading Доставка
+						.services__info-subtitle Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
+					img.services__info-img(src="../img/services/delivery.png" alt="service")
+				.services__info
+					.services__info-description
+						h2.services__info-heading Гарантия
+						.services__info-subtitle Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
+					img.services__info-img(src="../img/services/guarantee.png" alt="service")
+				.services__info
+					.services__info-description
+						h2.services__info-heading Кредит
+						.services__info-subtitle Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
+						+btn("#", "Подать заявку")(class="btn btn--credit")
+					img.services__info-img(src="../img/services/credit.png" alt="service")

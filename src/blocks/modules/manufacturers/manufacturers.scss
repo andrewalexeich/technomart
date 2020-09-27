@@ -1,0 +1,20 @@
+.manufacturers {
+    margin-bottom: 65px;
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 220px;
+        height: 145px;
+        border: 1px solid #eaeaea;
+        margin-bottom: 20px;
+        &:hover {
+            box-shadow: 0 10px 25px 0 rgba($blue_darken, 0.5);
+        }
+    }
+}

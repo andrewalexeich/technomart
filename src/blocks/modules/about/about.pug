@@ -1,0 +1,20 @@
+section.about
+	.container
+		.about__left
+			h2.about__heading Компания "Техномарт"
+			.about__content Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
+			.about__content Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:
+			ul.about__companies
+				li.about__company Деловые Линии
+				li.about__company Автотрейдинг
+				li.about__company ЖелДорЭкспедиция
+			+btn("#", "Подробнее о компании")(class="btn btn--about")
+		.about__right
+			h2.about__heading Контакты
+			.about__content Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+			iframe.about__map(data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.60362530028!2d30.32085871568232!3d59" +
+			".938719169054686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13" +
+			".1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007" +
+			"!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1560769473370!5m2!1sru" +
+			"!2sru" aria-label="map")
+			+btn("javascript:void(0)", "Заблудились? Напишите нам!")(class="btn btn--form")

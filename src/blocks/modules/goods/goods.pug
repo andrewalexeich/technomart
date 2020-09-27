@@ -1,0 +1,10 @@
+section.goods
+	.container
+		.section-header
+			h2.section-header__title Популярные товары:
+			+btn("#", "Все популярные товары")(class="btn btn--section-header")
+		.goods__items.goods__items--main
+			+goods("goods-1.jpg", "Перфоратор BOSCH BFG 9000", "32500", "25500")
+			+goods("goods-2.jpg", "Перфоратор BOSCH BFG 3000", "22500", "15500")
+			+goods("goods-3.jpg", "Перфоратор BOSCH BFG 6000", "30500", "25500")
+			+goods("goods-2.jpg", "Перфоратор BOSCH BFG 2000", "12500", "10500")(class="goods__item--new")

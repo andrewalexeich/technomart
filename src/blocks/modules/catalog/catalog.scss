@@ -1,0 +1,254 @@
+.catalog {
+    margin-bottom: 60px;
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .section-header {
+        margin-bottom: 25px;
+    }
+    .goods {
+        width: 700px;
+    }
+    &__sorting {
+        background: $cream_lighten;
+        margin-bottom: 25px;
+    }
+    &__sorting-heading {
+        font-family: "PT Sans", sans-serif;
+        font-size: 13px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        width: 184px;
+        height: 40px;
+        padding: 0 18px;
+        &--sorting {
+            padding: 0;
+        }
+    }
+    &__sorting-area {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 700px;
+        padding: 0 18px;
+    }
+    &__sorting-options {
+        display: flex;
+    }
+    &__sorting-option {
+        color: rgba(#000, .3);
+        font-family: "PT Sans", sans-serif;
+        font-size: 13px;
+        text-transform: uppercase;
+        display: block;
+        border-bottom: 1px dashed $red;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        background: none;
+        margin-right: 65px;
+        cursor: pointer;
+        transition: .2s;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            color: #000;
+        }
+        &--active {
+            color: $red;
+        }
+    }
+    &__sorting-buttons {
+        display: flex;
+    }
+    &__sorting-button {
+        width: 11px;
+        height: 10px;
+        border: 0;
+        outline: 0;
+        padding: 0;
+        margin-right: 20px;
+        opacity: .2;
+        cursor: pointer;
+        transition: .2s;
+        &:hover {
+            opacity: 1;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        &--up {
+            background: url("../img/sprites/sprite.svg#icon-up-dir") no-repeat center center;
+        }
+        &--down {
+            background: url("../img/sprites/sprite.svg#icon-down-dir") no-repeat center center;
+        }
+    }
+    &__filter {
+        width: 220px;
+    }
+    &__filter-heading {
+        color: #000;
+        font-family: "PT Sans", sans-serif;
+        font-size: 17px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    &__filter-price-block {
+        background: $cream_lighten;
+    }
+    &__filter-price {
+        margin-bottom: 40px;
+    }
+    &__filter-range {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        height: 80px;
+        background: $cream_lighten;
+        margin-bottom: 10px;
+    }
+    &__filter-price-range-info {
+        display: flex;
+        align-items: center;
+    }
+    &__filter-price-range-text {
+        color: rgba(#000, .3);
+        font-size: 13px;
+        margin-right: 70px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__filter-price-controls {
+        width: 180px;
+        &.noUi-horizontal {
+            height: 2px;
+        }
+        &.noUi-target {
+            background: $gray;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: 0;
+        }
+        .noUi-handle {
+            width: 20px;
+            height: 23px;
+            background: url("../img/sprites/sprite.svg#filter-button") no-repeat;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: 0;
+            outline: 0;
+            cursor: grabbing;
+            &:before, &:after {
+                content: none;
+            }
+        }
+    }
+    &__filter-price-inputs {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__filter-price-group {
+        position: relative;
+        width: 95px;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: -23px;
+            width: 15px;
+            height: 1px;
+            background: #000;
+        }
+        &:last-child:after {
+            content: none;
+        }
+    }
+    &__filter-price-input {
+        width: 100%;
+        height: 40px;
+        border: 0;
+        background: $cream_lighten;
+        text-align: center;
+        -moz-appearance: textfield;
+        -webkit-appearance: textfield;
+        appearance: none;
+        &::placeholder {
+            color: #000;
+            opacity: 1;
+        }
+        &:focus::placeholder {
+            color: transparent;
+        }
+    }
+    &__filter-options {
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__filter-option-container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 15px;
+        cursor: pointer;
+        user-select: none;
+        font-family: "PT Sans", sans-serif;
+        font-size: 15px;
+        text-transform: uppercase;
+        .catalog__filter-option-radio, .catalog__filter-option-checkbox {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .catalog__filter-option-radio:checked ~ .catalog__filter-option-checkmark {
+            width: 25px;
+            height: 25px;
+            background: url("../img/sprites/sprite.svg#radio-on") no-repeat;
+            transition: .2s;
+            &:hover {
+                opacity: .6;
+            }
+        }
+        .catalog__filter-option-checkbox:checked ~ .catalog__filter-option-checkmark--checkbox {
+            width: 27px;
+            height: 23px;
+            background: url("../img/sprites/sprite.svg#checkbox-on") no-repeat;
+            transition: .2s;
+            &:hover {
+                opacity: .6;
+            }
+        }
+    }
+    &__filter-option-checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25px;
+        height: 25px;
+        background: url("../img/sprites/sprite.svg#radio-off") no-repeat;
+        transition: .2s;
+        &:hover {
+            opacity: .6;
+        }
+        &--checkbox {
+            width: 27px;
+            height: 23px;
+            background: url("../img/sprites/sprite.svg#checkbox-off") no-repeat;
+            transition: .2s;
+            &:hover {
+                opacity: .6;
+            }
+        }
+    }
+}

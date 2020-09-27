@@ -1,0 +1,19 @@
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 870px;
+    padding: 35px;
+    background: $cream_lighten;
+    margin-bottom: 20px;
+    &__title {
+        color: $blue;
+        font-size: $font-size_heading_main;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    &--catalog {
+        background: $light_blue;
+        margin-bottom: 0;
+    }
+}

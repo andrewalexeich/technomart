@@ -1,0 +1,158 @@
+.features {
+    margin-bottom: 55px;
+    &__cards {
+        display: grid;
+        grid-template-columns: 300px 300px 300px;
+        -ms-grid-columns: auto 20px auto 20px auto;
+        -ms-grid-rows: auto 20px auto 20px auto;
+        grid-gap: 20px;
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        grid-column: span 1;
+        position: relative;
+        width: 250px;
+        min-height: 125px;
+        padding: 0 25px;
+        &--new {
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 60px;
+                height: 59px;
+                background: url("../img/goods/flag.png");
+            }
+        }
+        &--materials {
+            -ms-grid-column: 1;
+            -ms-grid-row: 1;
+            background: #ffbf47;
+        }
+        &--instruments {
+            -ms-grid-column: 3;
+            -ms-grid-row: 1;
+            background: #3bbce3;
+        }
+        &--tech {
+            -ms-grid-column: 5;
+            -ms-grid-row: 1;
+            background: #dc91d8;
+        }
+        &--discounts {
+            -ms-grid-column: 5;
+            -ms-grid-row: 3;
+            background: #8ed78f;
+        }
+        &--delivery {
+            -ms-grid-column: 5;
+            -ms-grid-row: 5;
+            background: #ffc047;
+        }
+    }
+    &__card-img {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        width: 23%;
+        transform: translateY(-50%);
+    }
+    &__card-heading {
+        color: #fff;
+        font-size: $font-size_heading_sm;
+        margin-bottom: 15px;
+    }
+    &__slider {
+        -ms-grid-column: 2;
+        grid-column: span 2;
+        -ms-grid-row: 3;
+        -ms-grid-row-span: 3;
+        grid-row: span 2;
+        position: relative;
+        width: 620px;
+        height: 100%;
+    }
+    &__slider-header {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        background: rgba(#000, .25);
+        padding: 18px 25px;
+    }
+    &__slider-heading {
+        color: #fff;
+        font-size: $font-size_heading_big;
+        font-weight: 600;
+        line-height: 36px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+    &__slider-subheading {
+        color: #fff;
+        font-size: 18px;
+    }
+    &__slider-img {
+        height: 100%;
+    }
+    &__slider-pagination {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        z-index: 100;
+        bottom: 36px;
+        left: 50%;
+        width: 28px;
+        transform: translateX(-50%);
+        .swiper-pagination-bullet {
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #fff;
+            cursor: pointer;
+            &-active {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    background: $red;
+                }
+            }
+        }
+    }
+    &__slider-buttons {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        z-index: 300;
+        top: 125px;
+        right: 0;
+        left: 0;
+        padding: 0 25px;
+    }
+    &__slider-prev {
+        width: 22px;
+        height: 40px;
+        background: url("../img/sprites/sprite.svg#icon-left") no-repeat -10px;
+        background-size: cover;
+        cursor: pointer;
+    }
+    &__slider-next {
+        width: 22px;
+        height: 40px;
+        background: url("../img/sprites/sprite.svg#icon-right") no-repeat -10px;
+        background-size: cover;
+        cursor: pointer;
+    }
+}

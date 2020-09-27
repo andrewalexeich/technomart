@@ -1,0 +1,177 @@
+.header {
+    background: $light_blue;
+    min-height: 42px;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        height: 45px;
+    }
+    &__top {
+        background: $blue_darken;
+    }
+    &__search {
+        flex-grow: 1;
+        position: relative;
+        .icon-search {
+            position: absolute;
+            top: 50%;
+            left: 17px;
+            transform: translateY(-50%);
+            color: rgba(#fff, .3);
+        }
+    }
+    &__search-field {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: 0;
+        padding: 0 15px 0 50px;
+        &:hover {
+            background: #212a3a;
+            + .icon-search {
+                color: #fff;
+            }
+        }
+        &::placeholder {
+            color: #fff;
+            opacity: 1;
+        }
+        &:focus {
+            background: #fff;
+            + .icon-search {
+                color: $red;
+            }
+        }
+    }
+    &__links {
+        display: flex;
+    }
+    &__link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 150px;
+        &:hover {
+            background: #212a3a;
+            .icon {
+                color: #fff;
+            }
+        }
+        .icon {
+            font-size: 16px;
+            color: rgba(#fff, .3);
+            margin-right: 14px;
+        }
+        &--order {
+            background: $green;
+            &:hover {
+                background: $green_hover;
+            }
+        }
+        &--full-cart {
+            background: $red;
+            &:hover {
+                background: $red_hover;
+            }
+        }
+    }
+    &__middle {
+        .container {
+            align-items: flex-start;
+            height: auto;
+            padding: 55px 0 45px;
+        }
+    }
+    &__about {
+        width: 200px;
+        margin-left: 50px;
+        color: $red;
+        font-style: italic;
+    }
+    &__contacts {
+        width: 270px;
+    }
+    &__phone {
+        display: flex;
+        align-items: center;
+        height: 45px;
+        box-shadow: 0 0 0 3px #fff;
+        padding: 0 16px;
+        margin-bottom: 10px;
+        background: none;
+        .icon-phone {
+            color: $blue_lighten;
+            font-size: 18px;
+            margin-right: 40px;
+        }
+    }
+    &__phone-num {
+        color: $red;
+        font-size: 21px;
+    }
+    &__addr {
+        color: $blue;
+        font-size: 14px;
+        text-align: center;
+        font-style: normal;
+    }
+    &__user-panel {
+        display: flex;
+    }
+    &__user-link {
+        color: #000;
+        font-size: 21px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        height: 45px;
+        padding: 0 25px;
+        margin-right: 10px;
+        &:hover {
+            color: $red;
+            .icon-login {
+                color: $blue;
+            }
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        .icon-login {
+            color: rgba($blue_lighten, .3);
+            font-size: 18px;
+            margin-right: 14px;
+        }
+        &--user {
+            width: 250px;
+            .icon-logout, .icon-user {
+                color: rgba($blue_lighten, .3);
+                font-size: 18px;
+                margin-right: 0;
+            }
+            .icon-logout {
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+    &__main-menu {
+        background: $blue;
+    }
+    &__bottom {
+        .container {
+            height: 60px;
+        }
+    }
+    &--catalog {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,101 @@
+.services {
+    background: $light_blue;
+    margin-bottom: 80px;
+    .container {
+        padding: 70px 0 100px;
+    }
+    &__about {
+        width: 400px;
+        margin-bottom: 75px;
+    }
+    &__about-heading {
+        font-size: $font-size_heading_main;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+    &__about-subheading {
+        font-family: "PT Sans", sans-serif;
+        font-size: 13px;
+    }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    &__tabs {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 240px;
+        margin-right: 80px;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 10px;
+            height: 280px;
+            transform: translateY(-50%);
+            background: url("../img/services/shadow.png") no-repeat center center;
+        }
+    }
+    &__tab {
+        display: block;
+        width: 100%;
+        border: 0;
+        padding: 20px 25px;
+        color: #fff;
+        font-size: 21px;
+        font-weight: 600;
+        text-align: left;
+        background: $blue;
+        box-shadow: 0 1px 0 0 $blue_darken, inset 0 1px 0 0 #405069;
+        cursor: pointer;
+        &:hover {
+            background: $blue_darken;
+        }
+        &--active {
+            background: #fff;
+            box-shadow: 0 1px 0 0 #fff;
+            color: $blue;
+            &:hover {
+                background: #fff;
+            }
+        }
+    }
+    &__info {
+        display: none;
+        animation: fadeEffect 0.2s;
+        @keyframes fadeEffect {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    }
+    &__info-description {
+        z-index: 100;
+        width: 380px;
+    }
+    &__info-heading {
+        color: $blue;
+        font-size: $font-size_heading_big;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+    &__info-subtitle {
+        font-family: "PT Sans", sans-serif;
+        font-size: 13px;
+        line-height: 24px;
+    }
+    &__info-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}

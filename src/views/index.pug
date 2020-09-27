@@ -1,0 +1,22 @@
+extends layouts/default
+include helpers/mixins
+include ../blocks/components/btn/btn
+include ../blocks/components/goods/goods
+
+block variables
+	- const title = "Техномарт"
+	- const page = "index"
+
+block content
+	include ../blocks/modules/header/header
+	main.main
+		include ../blocks/modules/features/features
+		include ../blocks/modules/goods/goods
+		include ../blocks/modules/manufacturers/manufacturers
+		include ../blocks/modules/services/services
+		include ../blocks/modules/about/about
+	include ../blocks/modules/footer/footer
+	include ../blocks/modules/overlay/overlay
+block scripts
+	script(src="../js/main.js")
+	script(src="../js/vendor.js")

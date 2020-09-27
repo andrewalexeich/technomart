@@ -1,0 +1,41 @@
+.features
+	.container
+		.features__cards
+			.features__card.features__card--materials.features__card--new
+				h2.features__card-heading Материалы
+				+btn("#", "На любой вкус")(class="btn btn--card")
+				img.features__card-img(src="../img/sprites/sprite.svg#icon-1" alt="feature-img")
+			.features__card.features__card--instruments
+				h2.features__card-heading Инструмент
+				+btn("#", "На все случаи")(class="btn btn--card")
+				img.features__card-img(src="../img/sprites/sprite.svg#icon-2" alt="feature-img")
+			.features__card.features__card--tech
+				h2.features__card-heading Техника
+				+btn("#", "Для стройки")(class="btn btn--card")
+				img.features__card-img(src="../img/sprites/sprite.svg#icon-3" alt="feature-img")
+			.features__slider.swiper-container
+				.features__slider-wrapper.swiper-wrapper
+					.features__slider-slide.swiper-slide
+						.features__slider-header
+							h2.features__slider-heading Перфораторы
+							.features__slider-subheading Настоящие мужские игрушки
+						img.features__slider-img(src="../img/slider/slide-1.jpg" alt="slide")
+						+btn("#", "Открыть каталог")(class="btn btn--slide")
+					.features__slider-slide.swiper-slide
+						.features__slider-header
+							h2.features__slider-heading Дрели
+							.features__slider-subheading Соседям на радость!
+						img.features__slider-img(src="../img/slider/slide-2.jpg" alt="slide")
+						+btn("#", "Открыть каталог")(class="btn btn--slide")
+				.features__slider-pagination.swiper-pagination
+				.features__slider-buttons
+					.features__slider-prev.swiper-button-prev
+					.features__slider-next.swiper-button-next
+			.features__card.features__card--discounts
+				h2.features__card-heading Скидки 50%
+				+btn("#", "На 350 товаров")(class="btn btn--card")
+				img.features__card-img(src="../img/sprites/sprite.svg#icon-4" alt="feature-img")
+			.features__card.features__card--delivery
+				h2.features__card-heading Доставка
+				+btn("#", "Бесплатно")(class="btn btn--card")
+				img.features__card-img(src="../img/sprites/sprite.svg#icon-5" alt="feature-img")

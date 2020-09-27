@@ -1,0 +1,103 @@
+.goods {
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        &--main {
+            margin-bottom: 0;
+        }
+    }
+    &__item {
+        position: relative;
+        width: 220px;
+        min-height: 320px;
+        border: 1px solid $gray;
+        margin-bottom: 20px;
+        &:hover {
+            box-shadow: 0 10px 25px 0 rgba($blue_darken, 0.5);
+            .goods__item-options {
+                display: flex;
+            }
+        }
+        &--new {
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 60px;
+                height: 59px;
+                background: url("../img/goods/flag.png");
+            }
+        }
+    }
+    &__item-options {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        background: #fff;
+        min-height: 164px;
+    }
+    &__item-img-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 164px;
+    }
+    &__item-info {
+        width: 155px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &__item-name {
+        font-family: "PT Sans", sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 20px;
+    }
+    &__item-prices {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__item-price-old {
+        color: #a9a9a9;
+        font-family: "PT Sans", sans-serif;
+        font-size: 17px;
+        font-weight: 600;
+        text-decoration: line-through;
+        margin-bottom: 7px;
+    }
+    &__item-price-new {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 140px;
+        height: 38px;
+        font-family: "PT Sans", sans-serif;
+        font-weight: 600;
+        margin: 0 auto;
+        border-radius: 3px;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: $red;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -26px;
+            border: 19px solid #fff;
+            border-left-color: $red;
+        }
+    }
+}

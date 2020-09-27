@@ -1,0 +1,102 @@
+@font-face {
+    font-family: "Cuprum";
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    src: local("Cuprum Regular"), local("Cuprum-Regular"),
+        url("../fonts/cuprum.woff2") format("woff2"),
+        url("../fonts/cuprum.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Cuprum";
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+    src: local("Cuprum Bold"), local("Cuprum-Bold"),
+        url("../fonts/cuprum-bold.woff2") format("woff2"),
+        url("../fonts/cuprum-bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    src: local("PT Sans"), local("PTSans-Regular"),
+        url("../fonts/pt-sans.woff2") format("woff2"),
+        url("../fonts/pt-sans.woff") format("woff");
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+    src: local("PT Sans Bold"), local("PTSans-Bold"),
+        url("../fonts/pt-sans-bold.woff2") format("woff2"),
+        url("../fonts/pt-sans-bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "icons";
+    font-display: swap;
+    src: url("../fonts/icons.woff2") format("woff2"),
+        url("../fonts/icons.woff") format("woff");
+}
+
+.icon:before {
+    font-family: "icons", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+    text-decoration: none;
+    text-transform: none;
+}
+
+.icon-bookmark:before {
+    content: "\E001";
+}
+
+.icon-cart:before {
+    content: "\E002";
+}
+
+.icon-fb:before {
+    content: "\E003";
+}
+
+.icon-home:before {
+    content: "\E004";
+}
+
+.icon-insta:before {
+    content: "\E005";
+}
+
+.icon-login:before {
+    content: "\E006";
+}
+
+.icon-logout:before {
+    content: "\E007";
+}
+
+.icon-phone:before {
+    content: "\E008";
+}
+
+.icon-search:before {
+    content: "\E009";
+}
+
+.icon-user:before {
+    content: "\E00A";
+}
+
+.icon-vk:before {
+    content: "\E00B";
+}

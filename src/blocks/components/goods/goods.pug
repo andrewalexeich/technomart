@@ -1,0 +1,14 @@
+mixin goods(img, goods_name, goods_old_price, goods_price)
+	.goods__item&attributes(attributes)
+		.goods__item-options
+			a.btn.btn--buy(href="#")
+				i.icon.icon-cart
+				| Купить
+			a.btn.btn--favs(href="#") В закладки
+		.goods__item-img-wrapper
+			img.goods__item-img(src="../img/goods/" + img alt="goods")
+		.goods__item-info
+			.goods__item-name= goods_name
+			.goods__item-prices
+				.goods__item-price-old= goods_old_price + " ₽"
+				span.goods__item-price-new= goods_price + " ₽"

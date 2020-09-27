@@ -1,0 +1,74 @@
+section.catalog
+	.container
+		.section-header.section-header--catalog
+			h2.section-header__title Перфораторы
+		.catalog__sorting
+			.container
+				.catalog__sorting-heading Фильтр:
+				.catalog__sorting-area
+					.catalog__sorting-heading.catalog__sorting-heading--sorting Сортировка:
+					.catalog__sorting-options
+						button.catalog__sorting-option.catalog__sorting-option--active По цене
+						button.catalog__sorting-option По типу
+						button.catalog__sorting-option По популярности
+					.catalog__sorting-buttons
+						button.catalog__sorting-button.catalog__sorting-button--up(type="button" aria-label="sort-by")
+						button.catalog__sorting-button.catalog__sorting-button--active.catalog__sorting-button--down(type="button" aria-label="sort-by")
+	.container
+		aside.catalog__filter
+			.catalog__filter-price
+				.catalog__filter-heading Цена:
+				.catalog__filter-range
+					.catalog__filter-price-controls
+				.catalog__filter-price-inputs
+					.catalog__filter-price-group
+						input.catalog__filter-price-input.catalog__filter-price-input--start(type="number" aria-label="price-min" placeholder="0")
+					.catalog__filter-price-group
+						input.catalog__filter-price-input.catalog__filter-price-input--end(type="number" aria-label="price-max" placeholder="30000")
+			.catalog__filter-options
+				.catalog__filter-heading Производители:
+				.catalog__filter-list
+					.catalog__filter-option
+						label.catalog__filter-option-container Bosch
+							input.catalog__filter-option-checkbox(type="checkbox" checked="checked" name="color")
+							span.catalog__filter-option-checkmark.catalog__filter-option-checkmark--checkbox
+					.catalog__filter-option
+						label.catalog__filter-option-container Интерскол
+							input.catalog__filter-option-checkbox(type="checkbox" name="color")
+							span.catalog__filter-option-checkmark.catalog__filter-option-checkmark--checkbox
+					.catalog__filter-option
+						label.catalog__filter-option-container Makita
+							input.catalog__filter-option-checkbox(type="checkbox" checked="checked" name="color")
+							span.catalog__filter-option-checkmark.catalog__filter-option-checkmark--checkbox
+					.catalog__filter-option
+						label.catalog__filter-option-container Dewalt
+							input.catalog__filter-option-checkbox(type="checkbox" name="color")
+							span.catalog__filter-option-checkmark.catalog__filter-option-checkmark--checkbox
+					.catalog__filter-option
+						label.catalog__filter-option-container Hitachi
+							input.catalog__filter-option-checkbox(type="checkbox" name="color")
+							span.catalog__filter-option-checkmark.catalog__filter-option-checkmark--checkbox
+			.catalog__filter-options
+				.catalog__filter-heading Питание:
+				.catalog__filter-list
+					.catalog__filter-option
+						label.catalog__filter-option-container Аккумуляторные
+							input.catalog__filter-option-radio(type="radio" checked="checked" name="bt")
+							span.catalog__filter-option-checkmark
+					.catalog__filter-option
+						label.catalog__filter-option-container Сетевые
+							input.catalog__filter-option-radio(type="radio" name="bt")
+							span.catalog__filter-option-checkmark
+			button.btn.btn--filter(type="button") Показать
+		.goods
+			.goods__items
+				+goods("goods-1.jpg", "Перфоратор BOSCH BFG 9000", "32500", "25500")
+				+goods("goods-2.jpg", "Перфоратор BOSCH BFG 3000", "22500", "15500")
+				+goods("goods-3.jpg", "Перфоратор BOSCH BFG 6000", "30500", "25500")(class="goods__item--new")
+				+goods("goods-1.jpg", "Перфоратор BOSCH BFG 9000", "32500", "25500")
+				+goods("goods-2.jpg", "Перфоратор BOSCH BFG 3000", "22500", "15500")(class="goods__item--new")
+				+goods("goods-3.jpg", "Перфоратор BOSCH BFG 6000", "30500", "25500")
+				+goods("goods-1.jpg", "Перфоратор BOSCH BFG 9000", "32500", "25500")(class="goods__item--new")
+				+goods("goods-2.jpg", "Перфоратор BOSCH BFG 3000", "22500", "15500")
+				+goods("goods-3.jpg", "Перфоратор BOSCH BFG 6000", "30500", "25500")
+			include ../../../blocks/components/pagination/pagination
